@@ -13,9 +13,9 @@ function pickPixel() {
   let green = $(".bg_green");
   let lightgreen = $(".bg_lightgreen");
 
-// -----------------------------------------------------------
-// vert foncé
-// -----------------------------------------------------------
+  // -----------------------------------------------------------
+  // vert foncé
+  // -----------------------------------------------------------
   darkestgreen.click(function () {
     let getActiveElmt = document.querySelector(".is-active");
     getActiveElmt.classList.remove("is-active");
@@ -26,9 +26,9 @@ function pickPixel() {
       $(this).css("background", color);
     });
   });
-// -----------------------------------------------------------
-// vert moins foncé
-// -----------------------------------------------------------
+  // -----------------------------------------------------------
+  // vert moins foncé
+  // -----------------------------------------------------------
   darkgreen.click(function () {
     let getActiveElmt = document.querySelector(".is-active");
     getActiveElmt.classList.remove("is-active");
@@ -39,9 +39,9 @@ function pickPixel() {
       $(this).css("background", color);
     });
   });
-// -----------------------------------------------------------
-// vert un peu foncé
-// -----------------------------------------------------------
+  // -----------------------------------------------------------
+  // vert un peu foncé
+  // -----------------------------------------------------------
   green.click(function () {
     let getActiveElmt = document.querySelector(".is-active");
     getActiveElmt.classList.remove("is-active");
@@ -52,9 +52,9 @@ function pickPixel() {
       $(this).css("background", color);
     });
   });
-// -----------------------------------------------------------
-// vert vraiment beaucoup moins foncé, vert clair ducoup
-// -----------------------------------------------------------
+  // -----------------------------------------------------------
+  // vert vraiment beaucoup moins foncé, vert clair ducoup
+  // -----------------------------------------------------------
   lightgreen.click(function () {
     let getActiveElmt = document.querySelector(".is-active");
     getActiveElmt.classList.remove("is-active");
@@ -67,7 +67,23 @@ function pickPixel() {
   });
 }
 
+function erase() {
+  let pixel = $(".pixel");
+  pixel.dblclick(function () {
+    $(this).css("background", "none");
+  });
+}
+
+function resetPixel() {
+  let resetBtn = $("#reset");
+  let pixels = $(".app-screen").children();
+  resetBtn.click(function () {
+    pixels.css('background', 'none')
+  });
+}
 $(function () {
   createPixel();
   pickPixel();
+  resetPixel();
+  erase();
 });
