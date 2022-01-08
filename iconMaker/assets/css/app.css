@@ -1,34 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-    background-color: #313131;
-    font-family: 'Press Start 2P', cursive;
+  background-color: #313131;
+  font-family: "Press Start 2P", cursive;
 }
 button:focus {
-    outline: none;
+  outline: none;
 }
 h1 {
-    font-family: 'Press Start 2P', cursive;
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 2vmin;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2vmin;
+}
+.gameboy {
+    height: 900px;
+    width: auto;
 }
 /* -----------------------------------------------------------
 Palette de couleur
 ----------------------------------------------------------- */
+.add-color {
+  background: rgb(151, 151, 151);
+}
 .bg_darkestgreen {
-    background: #081820;
+  background: #081820;
 }
 .bg_darkgreen {
-    background: #346856;
+  background: #346856;
 }
 .bg_green {
-    background: #88c070;
+  background: #88c070;
 }
 .bg_lightgreen {
-    background: #e0f8d0;
+  background: #e0f8d0;
 }
 
 /* -----------------------------------------------------------
@@ -36,72 +43,94 @@ Palette de couleur
 ----------------------------------------------------------- */
 
 .app-wrapper {
-    width: 64vmin;
-    margin: 5vmin auto 0;
+  width: 64vmin;
+  margin: 5vmin auto 0;
 }
 .app-screen {
-    height: 64vmin;
-    width: 64vmin;
-    display: grid;
-    grid-template-columns: repeat(32, 2vmin);
-    grid-template-rows: repeat(32, 2vmin);
-    background: #fff;
-    box-shadow: 0 0 50px rgba(0,0,0,0.2);
-    
+  height: 64vmin;
+  width: 64vmin;
+  display: grid;
+  grid-template-columns: repeat(32, 2vmin);
+  grid-template-rows: repeat(32, 2vmin);
+  background: rgb(236, 235, 235);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 .pixel {
-    border: 1px solid grey;
-    cursor: cell;
-    transition: border 100ms ease-in-out;
+  border: 1px solid rgb(221, 221, 221);
+  cursor: cell;
+  transition: border 100ms ease-in-out;
 }
 .pixel:hover {
-    border: 1px solid rgba(0,0,0,0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 .colorset-name {
-    color: #fff;
-    font-size: 8px;
-    margin: 2vmin 0 0;
-    text-align: center;
+  color: #fff;
+  font-size: 8px;
+  margin: 2vmin 0 0;
+  text-align: center;
 }
-.app-tools {
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 8px;
-    margin-top: 2vmin;
+.color-wrapper {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8px;
+  margin-top: 2vmin;
 }
-.app-tools .swatch {
-    height: 4vmin;
-    width: 4vmin;
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 0;
-    cursor: pointer;
-    display: block;
-    margin: 0 1vmin;
+.color-wrapper .swatch {
+  height: 4vmin;
+  width: 4vmin;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+  cursor: pointer;
+  display: block;
+  margin: 0 1vmin;
 }
-.app-tools .swatch.is-active {
-    border: 2px solid #fff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+.color-wrapper .swatch.is-active,
+.color-wrapper .swatch:hover {
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .app-tools .reset,
 .app-tools .export,
-.app-tools .import  {
-    height: 4vmin;
-    background: #000;
-    color: #fff;
-    border: 0 none;
-    border-radius: 3px;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 8px;
-    margin: 0 1vmin;
-    padding: 0 1vmin;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+.app-tools .import {
+  height: 4vmin;
+  background: #000;
+  color: #fff;
+  border: 0 none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Press Start 2P", cursive;
+  font-size: 8px;
+  margin: 0 1vmin;
+  padding: 0 1vmin;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 #result {
-    margin-top: 30px;
-    text-align: center;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/*--------------------------------------------------- 
+color wrapper
+ --------------------------------------------------*/
+
+.color-wrapper {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+.title h2 {
+  font-size: 1.5vh;
+}
+.buttons {
+  height: 480px;
+  width: 360px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  margin-top: 50px;
+  display: flex;
 }
