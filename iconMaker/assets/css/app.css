@@ -10,8 +10,9 @@ button:focus {
     outline: none;
 }
 h1 {
+    font-family: 'Press Start 2P', cursive;
     text-align: center;
-    color: #e0f8d0;
+    color: #ffffff;
     margin-bottom: 2vmin;
 }
 /* -----------------------------------------------------------
@@ -49,8 +50,8 @@ Palette de couleur
     
 }
 .pixel {
-    border: 1px solid transparent;
-    cursor: crosshair;
+    border: 1px solid grey;
+    cursor: cell;
     transition: border 100ms ease-in-out;
 }
 .pixel:hover {
@@ -84,7 +85,8 @@ Palette de couleur
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 .app-tools .reset,
-.app-tools .export {
+.app-tools .export,
+.app-tools .import  {
     height: 4vmin;
     background: #000;
     color: #fff;

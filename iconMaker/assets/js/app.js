@@ -78,12 +78,30 @@ function resetPixel() {
   let resetBtn = $("#reset");
   let pixels = $(".app-screen").children();
   resetBtn.click(function () {
-    pixels.css('background', 'none')
+    pixels.css("background", "none");
   });
 }
+function exportBtn(){
+  let exp = $('#export');
+  exp.click(function(){
+      domtoimage.toJpeg(document.getElementById('content'))
+      .then(function(dataUrl){
+          let link = document.createElement('a');
+          link.download = 'image.jpeg';
+          link.href = dataUrl;
+          link.click();
+      });
+  });
+}
+
+
+
+
 $(function () {
   createPixel();
   pickPixel();
   resetPixel();
   erase();
+  exportBtn();
+
 });
