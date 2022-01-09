@@ -15,28 +15,16 @@ h1 {
   color: #ffffff;
   margin-bottom: 2vmin;
 }
-.gameboy {
-    height: 900px;
-    width: auto;
-}
 /* -----------------------------------------------------------
 Palette de couleur
 ----------------------------------------------------------- */
 .add-color {
   background: rgb(151, 151, 151);
 }
-.bg_darkestgreen {
-  background: #081820;
+.bg_black {
+  background: black;
 }
-.bg_darkgreen {
-  background: #346856;
-}
-.bg_green {
-  background: #88c070;
-}
-.bg_lightgreen {
-  background: #e0f8d0;
-}
+
 
 /* -----------------------------------------------------------
 Palette de couleur
@@ -55,6 +43,14 @@ Palette de couleur
   background: rgb(236, 235, 235);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
+.info {
+  width: 60vmin;
+  margin: 0 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30vmin;
+}
 .pixel {
   border: 1px solid rgb(221, 221, 221);
   cursor: cell;
@@ -69,7 +65,8 @@ Palette de couleur
   margin: 2vmin 0 0;
   text-align: center;
 }
-.color-wrapper {
+.color-wrapper,
+.size-wrapper {
   color: #fff;
   display: flex;
   justify-content: center;
@@ -84,7 +81,7 @@ Palette de couleur
   border-radius: 0;
   cursor: pointer;
   display: block;
-  margin: 0 1vmin;
+  margin: 1vmin 1vmin;
 }
 .color-wrapper .swatch.is-active,
 .color-wrapper .swatch:hover {
@@ -93,14 +90,16 @@ Palette de couleur
 }
 .app-tools .reset,
 .app-tools .export,
-.app-tools .import {
+.app-tools .import,
+#size-btn,
+.add {
   height: 4vmin;
   background: #000;
   color: #fff;
   border: 0 none;
   border-radius: 3px;
   cursor: pointer;
-  display: inline-block;
+  /* display: inline-block; */
   font-family: "Press Start 2P", cursive;
   font-size: 8px;
   margin: 0 1vmin;
@@ -117,20 +116,44 @@ Palette de couleur
 color wrapper
  --------------------------------------------------*/
 
-.color-wrapper {
+.color-wrapper, 
+.size-wrapper {
   margin-top: 120px;
   display: flex;
   flex-direction: column;
 }
 .title h2 {
+  font-size: 2vh;
+  margin-bottom: 2vmin;
+}
+ h2 {
   font-size: 1.5vh;
+  margin-bottom: 2vmin;
 }
 .buttons {
-  height: 480px;
+  height: auto;
   width: 360px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  margin-top: 50px;
+  grid-template-rows: repeat(4, 1fr);
+  margin-top: 2vmin;
+  /* display: flex; */
+}
+
+.new-color {
+  margin-top: 2vmin;
   display: flex;
+  flex-direction: row;
+}
+.new-color h2 {
+  margin-top: 0.5vmin;
+}
+#colorPicker {
+  margin-left: 1vmin;
+}
+.separator {
+  margin: 4vmin 0;
+  height: 1px;
+  background: white;
+  width: 30vmin;
 }

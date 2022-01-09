@@ -37,6 +37,9 @@
           <div class="app-wrapper">
             <h1>IconMaker</h1>
             <div class="app-screen" id="content">
+              <!-- <div class="info">
+                <p class="text">Please choose a grid size .</p>
+              </div> -->
               <!-- occurrences de <div class="pixel"></div> ici -->
             </div>
             <div class="error"></div>
@@ -48,20 +51,30 @@
           </div>
         </div>
         <div class="col">
-          <div class="color-wrapper">
+          <div class=" container-fluid color-wrapper">
             <div class="title">
               <h2>Colors</h2>
             </div>
+            <div class="new-color">
+              <h2>Pick a new Color</h2>
+              <input type="color" id="colorPicker" value="rgb(151, 151, 151)" title="Set PAINT color">
+            </div>
+            <button class="add">Add +</button>
+            <div class="separator"></div>
+            <h2>Saved Colors</h2>
             <div class="buttons">
-              <button id="add-color" class="swatch add-color">
-                <ion-icon class="plus_icon" name="add-outline"></ion-icon>
-              </button>
-              <button id="paint_darkestgreen" class="swatch bg_darkestgreen is-active"></button>
-              <button id="paint_darkgreen" class="swatch bg_darkgreen"></button>
-              <button id="paint_green" class="swatch bg_green"></button>
-              <button id="paint_lightgreen" class="swatch bg_lightgreen"></button>
+              <button id="paint_black" class="swatch bg_black is-active"></button>
             </div>
           </div>
+          <div class="size-wrapper">
+                <div class="title">
+                    <h2>Grid Sizing</h2>
+                </div>
+                <div class="size-btn">
+                    <button id="size-btn" class="size-btn size-btn-32 is-active" value="32">32*32</button>
+                    <button id="size-btn" class="size-btn size-btn-64" value="64">64*64</button>
+                </div>
+            </div>
         </div>
       </div>
     </div>
